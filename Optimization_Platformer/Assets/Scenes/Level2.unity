@@ -715,6 +715,10 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 4026178148150599382, guid: 75d88e33944afe74c87abfe1cd288623, type: 3}
+      propertyPath: FruitSound
+      value: 
+      objectReference: {fileID: 1976958715}
     - target: {fileID: 4864807049187910948, guid: 75d88e33944afe74c87abfe1cd288623, type: 3}
       propertyPath: m_Name
       value: Banana
@@ -881,6 +885,10 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 7139725960739235286, guid: fb40bda184f341b48b282570de2bbece, type: 3}
+      propertyPath: FruitSound
+      value: 
+      objectReference: {fileID: 1976958715}
     - target: {fileID: 9008815984234385535, guid: fb40bda184f341b48b282570de2bbece, type: 3}
       propertyPath: m_Name
       value: Orange
@@ -958,8 +966,8 @@ MonoBehaviour:
       m_Calls: []
   m_text: 'Fruit:'
   m_isRightToLeft: 0
-  m_fontAsset: {fileID: 11400000, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
-  m_sharedMaterial: {fileID: 2180264, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
+  m_fontAsset: {fileID: 11400000, guid: b8c9012451feb6644a8ceffaf442753c, type: 2}
+  m_sharedMaterial: {fileID: 6276188100853841515, guid: b8c9012451feb6644a8ceffaf442753c, type: 2}
   m_fontSharedMaterials: []
   m_fontMaterial: {fileID: 0}
   m_fontMaterials: []
@@ -991,7 +999,7 @@ MonoBehaviour:
   m_fontSizeMax: 72
   m_fontStyle: 0
   m_HorizontalAlignment: 1
-  m_VerticalAlignment: 256
+  m_VerticalAlignment: 512
   m_textAlignment: 65535
   m_characterSpacing: 0
   m_wordSpacing: 0
@@ -1428,6 +1436,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: Pineapple
       objectReference: {fileID: 0}
+    - target: {fileID: 8792200395281006489, guid: cd8602125aea2a04da8a57d0153786fe, type: 3}
+      propertyPath: FruitSound
+      value: 
+      objectReference: {fileID: 1976958715}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -1754,6 +1766,10 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 7139725960739235286, guid: fb40bda184f341b48b282570de2bbece, type: 3}
+      propertyPath: FruitSound
+      value: 
+      objectReference: {fileID: 1976958715}
     - target: {fileID: 9008815984234385535, guid: fb40bda184f341b48b282570de2bbece, type: 3}
       propertyPath: m_Name
       value: Orange (1)
@@ -28205,6 +28221,10 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 1490241039925530734, guid: ef02be5ed07adfd42a1691ffcbd4dcb5, type: 3}
+      propertyPath: FruitSound
+      value: 
+      objectReference: {fileID: 1976958715}
     - target: {fileID: 3792424688429634003, guid: ef02be5ed07adfd42a1691ffcbd4dcb5, type: 3}
       propertyPath: m_Name
       value: Apple
@@ -28298,8 +28318,8 @@ MonoBehaviour:
       m_Calls: []
   m_text: Collect Fruit to Jump Higher
   m_isRightToLeft: 0
-  m_fontAsset: {fileID: 11400000, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
-  m_sharedMaterial: {fileID: 2180264, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
+  m_fontAsset: {fileID: 11400000, guid: b8c9012451feb6644a8ceffaf442753c, type: 2}
+  m_sharedMaterial: {fileID: 6276188100853841515, guid: b8c9012451feb6644a8ceffaf442753c, type: 2}
   m_fontSharedMaterials: []
   m_fontMaterial: {fileID: 0}
   m_fontMaterials: []
@@ -28323,8 +28343,8 @@ MonoBehaviour:
   m_faceColor:
     serializedVersion: 2
     rgba: 4294967295
-  m_fontSize: 36
-  m_fontSizeBase: 36
+  m_fontSize: 26
+  m_fontSizeBase: 26
   m_fontWeight: 400
   m_enableAutoSizing: 0
   m_fontSizeMin: 18
@@ -28583,6 +28603,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: Pineapple (1)
       objectReference: {fileID: 0}
+    - target: {fileID: 8792200395281006489, guid: cd8602125aea2a04da8a57d0153786fe, type: 3}
+      propertyPath: FruitSound
+      value: 
+      objectReference: {fileID: 1976958715}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -28617,7 +28641,7 @@ AudioSource:
   OutputAudioMixerGroup: {fileID: 0}
   m_audioClip: {fileID: 8300000, guid: 005a4f8b17115b24b8a6c9460a51a550, type: 3}
   m_PlayOnAwake: 1
-  m_Volume: 0.5
+  m_Volume: 0.4
   m_Pitch: 1
   Loop: 1
   Mute: 0
@@ -28724,6 +28748,10 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 4026178148150599382, guid: 75d88e33944afe74c87abfe1cd288623, type: 3}
+      propertyPath: FruitSound
+      value: 
+      objectReference: {fileID: 1976958715}
     - target: {fileID: 4864807049187910948, guid: 75d88e33944afe74c87abfe1cd288623, type: 3}
       propertyPath: m_Name
       value: Banana (1)
@@ -28785,6 +28813,10 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 4039150914165466853, guid: 7a62c9806f531b440a8668de853c6865, type: 3}
+      propertyPath: FruitSound
+      value: 
+      objectReference: {fileID: 1976958715}
     - target: {fileID: 4339822418998894210, guid: 7a62c9806f531b440a8668de853c6865, type: 3}
       propertyPath: m_Name
       value: Cherries
@@ -29287,6 +29319,11 @@ Canvas:
   m_SortingLayerID: 0
   m_SortingOrder: 0
   m_TargetDisplay: 0
+--- !u!82 &1976958715 stripped
+AudioSource:
+  m_CorrespondingSourceObject: {fileID: 172372578991655728, guid: 98b031283b6052249a009226d0bba0e3, type: 3}
+  m_PrefabInstance: {fileID: 1112981127}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1001 &2006719930
 PrefabInstance:
   m_ObjectHideFlags: 0

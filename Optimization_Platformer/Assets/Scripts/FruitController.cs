@@ -4,6 +4,7 @@ using UnityEngine;
 
 public class FruitController : MonoBehaviour
 {
+    public AudioSource FruitSound;
     // Start is called before the first frame update
     void Start()
     {
@@ -16,7 +17,9 @@ public class FruitController : MonoBehaviour
         if (controller != null)
         {
             controller.getFruit(1);
+            FruitSound.Play();
             Destroy(gameObject);
+            
         }
     }
 }
