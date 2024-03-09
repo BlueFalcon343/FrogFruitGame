@@ -7,6 +7,7 @@ using UnityEngine.SceneManagement;
 
 public class PlayerController : MonoBehaviour
 {
+    //Public variables
     public float moveSpeed;
     public float jumpForce;
     public Transform ceilingCheck;
@@ -16,6 +17,7 @@ public class PlayerController : MonoBehaviour
     public TextMeshProUGUI scoreText;
     public TextMeshProUGUI startText;
 
+    //Private variables
     private Rigidbody2D rb;
     private bool facingRight = true;
     private float moveDirection;
@@ -45,7 +47,7 @@ public class PlayerController : MonoBehaviour
             isJumping = true;
         }
 
-        //Animation and flipping
+        //Animation and directional flipping
         if (moveDirection > 0 && !facingRight)
         {
             FlipCharacter();
@@ -55,7 +57,7 @@ public class PlayerController : MonoBehaviour
             FlipCharacter();
         }
 
-        //Move
+        //Movement
         rb.velocity = new Vector2(moveDirection * moveSpeed, rb.velocity.y);
         if(isJumping && isGrounded == true)
         {
@@ -75,12 +77,13 @@ public class PlayerController : MonoBehaviour
 
     private void FlipCharacter()
     {
-        facingRight = !facingRight; //The reverse
+        facingRight = !facingRight;
         transform.Rotate(0f, 180f, 0f);
     }
 
     public void getFruit(int amount)
     {
+        //Increases players jump height upon getting a fruit
         jumpForce = jumpForce + 50.0f;
         score = score + amount;
         setScoreText();
@@ -88,11 +91,13 @@ public class PlayerController : MonoBehaviour
 
     void setScoreText()
     {
+        //Displays number of fruit
         scoreText.text = "Fruit: " + score.ToString();
     }
 
     public void Death()
     {
+        //Simple respawn on death that grabs current scene.
         SceneManager.LoadScene(SceneManager.GetActiveScene().name);
     }
 
