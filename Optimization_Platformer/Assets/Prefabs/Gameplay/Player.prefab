@@ -99,7 +99,7 @@ Transform:
   - {fileID: 8551616593877600613}
   - {fileID: 5734818048578452120}
   m_Father: {fileID: 0}
-  m_RootOrder: 0
+  m_RootOrder: 1
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!212 &628552826946961468
 SpriteRenderer:
@@ -202,6 +202,7 @@ MonoBehaviour:
   checkRadius: 0.4
   scoreText: {fileID: 0}
   startText: {fileID: 0}
+  FruitSound: {fileID: 172372578991655728}
 --- !u!70 &7553309893680997055
 CapsuleCollider2D:
   m_ObjectHideFlags: 0

@@ -16,6 +16,7 @@ public class PlayerController : MonoBehaviour
     public float checkRadius;
     public TextMeshProUGUI scoreText;
     public TextMeshProUGUI startText;
+    public AudioSource FruitSound;
 
     //Private variables
     private Rigidbody2D rb;
@@ -56,6 +57,12 @@ public class PlayerController : MonoBehaviour
         {
             FlipCharacter();
         }
+    }
+
+    private void FixedUpdate()
+    {
+        //Ground check
+        isGrounded = Physics2D.OverlapCircle(groundCheck.position, checkRadius, groundObjects);
 
         //Movement
         rb.velocity = new Vector2(moveDirection * moveSpeed, rb.velocity.y);
@@ -66,26 +73,17 @@ public class PlayerController : MonoBehaviour
         isJumping = false;
     }
 
-    private void FixedUpdate()
-    {
-        //Ground check
-        isGrounded = Physics2D.OverlapCircle(groundCheck.position, checkRadius, groundObjects);
-        if(isGrounded)
-        {
-        }
-    }
-
     private void FlipCharacter()
     {
         facingRight = !facingRight;
         transform.Rotate(0f, 180f, 0f);
     }
 
-    public void getFruit(int amount)
+    public void getFruit()
     {
         //Increases players jump height upon getting a fruit
         jumpForce = jumpForce + 50.0f;
-        score = score + amount;
+        score++;
         setScoreText();
     }
 
@@ -99,6 +97,20 @@ public class PlayerController : MonoBehaviour
     {
         //Simple respawn on death that grabs current scene.
         SceneManager.LoadScene(SceneManager.GetActiveScene().name);
+    }
+
+    void OnTriggerEnter2D(Collider2D other)
+    {
+        if(other.gameObject.layer == 7)
+        {
+            getFruit();
+            FruitSound.Play();
+            Destroy(other.gameObject);
+        }
+        else if(other.gameObject.layer == 8)
+        {
+            Death();
+        }
     }
 
 }
