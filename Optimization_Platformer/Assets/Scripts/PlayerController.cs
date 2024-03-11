@@ -79,37 +79,26 @@ public class PlayerController : MonoBehaviour
         transform.Rotate(0f, 180f, 0f);
     }
 
-    public void getFruit()
-    {
-        //Increases players jump height upon getting a fruit
-        jumpForce = jumpForce + 50.0f;
-        score++;
-        setScoreText();
-    }
-
     void setScoreText()
     {
         //Displays number of fruit
         scoreText.text = "Fruit: " + score.ToString();
     }
 
-    public void Death()
-    {
-        //Simple respawn on death that grabs current scene.
-        SceneManager.LoadScene(SceneManager.GetActiveScene().name);
-    }
-
     void OnTriggerEnter2D(Collider2D other)
     {
         if(other.gameObject.layer == 7)
         {
-            getFruit();
+            jumpForce = jumpForce + 50.0f;
+            score++;
+            setScoreText();
             FruitSound.Play();
             Destroy(other.gameObject);
         }
         else if(other.gameObject.layer == 8)
         {
-            Death();
+            //Simple respawn on death that grabs current scene.
+            SceneManager.LoadScene(SceneManager.GetActiveScene().name);
         }
     }
 
